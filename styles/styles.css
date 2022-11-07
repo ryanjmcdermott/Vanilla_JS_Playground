@@ -1,0 +1,267 @@
+@import url(reset.css);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Sharp);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+html {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+html body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+html body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  background-color: black;
+  padding: 2rem 0;
+}
+
+html body header container {
+  padding: 0 2.5rem;
+}
+
+html body header container h1 {
+  text-align: center;
+  color: white;
+}
+
+html body main {
+  padding: 2rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body main video-container {
+  max-width: 900px;
+  width: 100%;
+  background-color: #0056a0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+html body main video-container controls-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  color: white;
+  font-size: 1.6rem;
+}
+
+html body main video-container controls-wrapper:before {
+  content: "";
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: calc(100% + 3.5rem);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(transparent));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+html body main video-container controls-wrapper video-timeline {
+  height: 0.7rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+html body main video-container controls-wrapper video-timeline:hover current-time, html body main video-container controls-wrapper video-timeline:hover progress-bar::before {
+  display: block;
+}
+
+html body main video-container controls-wrapper video-timeline progress-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0.3rem;
+  position: relative;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+html body main video-container controls-wrapper video-timeline progress-area current-time {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: -2rem;
+  font-size: 1.3rem;
+  color: white;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  text-shadow: rgba(0, 0, 0, 0.6);
+}
+
+html body main video-container controls-wrapper video-timeline progress-area progress-bar {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  background: #0056a0;
+}
+
+html body main video-container controls-wrapper video-timeline progress-area progress-bar:before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 1.3rem;
+  width: 1.3rem;
+  background: inherit;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+html body main video-container controls-wrapper video-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 2rem 1rem;
+}
+
+html body main video-container controls-wrapper video-controls video-timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body main video-container controls-wrapper video-controls .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+html body main video-container controls-wrapper video-controls .options.right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+html body main video-container controls-wrapper video-controls .options.right playback-content {
+  position: relative;
+}
+
+html body main video-container controls-wrapper video-controls .options.right playback-content button.playback-speed:hover ~ .speed-options {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+html body main video-container controls-wrapper video-controls .options.right playback-content .speed-options {
+  position: absolute;
+  bottom: 4rem;
+  left: -4rem;
+  background: white;
+  list-style: none;
+  width: 9.5rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+}
+
+html body main video-container controls-wrapper video-controls .options.right playback-content .speed-options li {
+  font-size: 1.4rem;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  color: black;
+}
+
+html body main video-container controls-wrapper video-controls .options.right playback-content .speed-options li.active {
+  background: #0056a0;
+  color: white;
+}
+
+html body main video-container controls-wrapper video-controls .options.left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+html body main video-container controls-wrapper video-controls .options input {
+  height: 0.4rem;
+  max-width: 6.5rem;
+}
+
+html body main video-container controls-wrapper video-controls .options video-timer {
+  font-size: 1.4rem;
+  margin-left: 1rem;
+}
+
+html body main video-container controls-wrapper video-controls .options video-timer timer-separator {
+  margin: 0 0.5rem;
+}
+
+html body main video-container controls-wrapper video-controls .options button {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1.8rem;
+}
+
+html body main video-container controls-wrapper video-controls .options button i {
+  width: 100%;
+  height: 100%;
+  line-height: 4rem;
+  font-size: inherit;
+}
+
+html body main video-container controls-wrapper video-controls .options button span {
+  font-size: inherit;
+}
+
+html body main video-container video {
+  width: 100%;
+}
+
+html body footer {
+  background-color: #0056a0;
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 2rem 0;
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=styles.css.map */

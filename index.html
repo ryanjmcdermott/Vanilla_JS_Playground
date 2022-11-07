@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESPN Demo | Ryan McDermott</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="https://kit.fontawesome.com/1d4d2b4a6b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <container>
+            <h1>ESPN Demo</h1>
+        </container>
+    </header>
+    <main>
+        <video-container>
+            <controls-wrapper>
+                <video-timeline>
+                    <progress-area>
+                        <current-time>00:00</current-time>
+                        <progress-bar></progress-bar>
+                    </progress-area>
+                </video-timeline>
+                <video-controls>
+                    <section class="options left">
+                        <button class="volume">
+                            <i class="fa-solid fa-sharp fa-volume"></i>
+                        </button>
+                        <input type="range">
+                        <video-timer>
+                            <current-time>00:00</current-time>
+                            <timer-separator> / </timer-separator>
+                            <video-duration>00:00</video-duration>
+                        </video-timer>
+                    </section>
+                    <section class="options center">
+                        <button class="skip-backward">
+                            <i class="fa-solid fa-sharp fa-backward"></i>
+                        </button>
+                        <button class="play-pause">
+                            <i class="fa-solid fa-sharp fa-play"></i>
+                        </button>
+                        <button class="skip-forward">
+                            <i class="fa-solid fa-sharp fa-forward"></i>
+                        </button>
+                    </section>
+                    <section class="options right">
+                        <playback-content>
+                            <button class="playback-speed">
+                                <span class="material-icons-sharp">slow_motion_video</span>
+                            </button>
+                            <ul class="speed-options">
+                                <li>0.5</li>
+                                <li>0.75</li>
+                                <li class="active">Normal</li>
+                                <li>1.25</li>
+                                <li>1.5</li>
+                            </ul>
+                        </playback-content>
+                        <button class="pic-in-pic">
+                            <span class="material-icons">picture_in_picture_alt</span>                                
+                        </button>
+                        <button class="fullscreen">
+                            <i class="fa-solid fa-sharp fa-expand"></i>
+                        </button>
+                    </section>
+                </video-controls>
+            </controls-wrapper>
+            <video src="media/Onward_explainer_final.mp4"></video>
+        </video-container>
+    </main>
+    <footer>
+        <p>Copyright 2022</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
