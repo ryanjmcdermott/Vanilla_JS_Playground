@@ -1,4 +1,4 @@
-# ESPN-Demo
+# Vanilla JavaScript Playground
 
 This project was created to practice and showcase the use of specific technologies and types of work. 
 
